@@ -5,10 +5,13 @@ import {
   RouteObject,
 } from "react-router-dom";
 /* import reactLogo from './assets/react.svg' */
-import viteLogo from "/vite.svg";
-import "tdesign-mobile-react/es/style/index.css";
-import "remixicon/fonts/remixicon.css";
-import "./App.css";
+import viteLogo from '/vite.svg'
+import 'tdesign-mobile-react/es/style/index.css';
+import 'remixicon/fonts/remixicon.css'
+import './App.css'
+
+import { HomePage, RecordPage, PayMentPage } from 'page'
+
 
 import {
   HomePage,
@@ -25,7 +28,6 @@ export const RouterMap = [
     path: "/",
   },
   {
-    index: true,
     element: <RecordPage />,
     path: "/record",
   },
@@ -44,6 +46,11 @@ export const RouterMap = [
     element: <DeletePayment />,
     path: "/deletePayment",
   },
+  {
+    element: <PayMentPage />,
+    path: '/payment'
+  },
+  
 
   /* { path: "*", Component: Root }, */
 ];
