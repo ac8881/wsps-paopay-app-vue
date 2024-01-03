@@ -6,7 +6,7 @@ import 'tdesign-mobile-react/es/style/index.css';
 import 'remixicon/fonts/remixicon.css'
 import './App.css'
 
-import { HomePage, RecordPage } from 'page'
+import { HomePage, RecordPage, PayMentPage } from 'page'
 
 
 export const RouterMap = [
@@ -16,10 +16,14 @@ export const RouterMap = [
     path: '/'
   },
   {
-    index: true,
     element: <RecordPage />,
     path: '/record'
   },
+  {
+    element: <PayMentPage />,
+    path: '/payment'
+  },
+  
 
   /* { path: "*", Component: Root }, */
 ]
