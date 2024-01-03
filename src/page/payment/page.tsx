@@ -66,9 +66,9 @@ export const PayMentPage = () => {
 
         </div>
 
-        <div className='overflow-hidden rounded-lg mt-2'>
-          <Button size="small" shape="rectangle" theme="primary" block>
-            已收到
+        <div className='overflow-hidden rounded-lg mt-2 px-2'>
+          <Button size="small" shape="rectangle" theme="primary" block className='my-2'>
+            筛选
           </Button>
 
           <Tabs showBottomLine={false} change={handleChange}>
