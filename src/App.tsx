@@ -10,7 +10,13 @@ import "tdesign-mobile-react/es/style/index.css";
 import "remixicon/fonts/remixicon.css";
 import "./App.css";
 
-import { HomePage, RecordPage, ReceiptPage, AddPaymentMethod } from "page";
+import {
+  HomePage,
+  RecordPage,
+  ReceiptPage,
+  AddPaymentMethod,
+  DeletePayment,
+} from "page";
 
 export const RouterMap = [
   {
@@ -32,6 +38,11 @@ export const RouterMap = [
     index: true,
     element: <AddPaymentMethod />,
     path: "/addPaymentMethod/:type",
+  },
+  {
+    index: true,
+    element: <DeletePayment />,
+    path: "/deletePayment",
   },
 
   /* { path: "*", Component: Root }, */

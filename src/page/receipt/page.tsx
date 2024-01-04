@@ -9,7 +9,6 @@ import {
   Radio,
 } from "tdesign-mobile-react";
 import { AddIcon } from "tdesign-icons-react";
-import dayjs from "dayjs";
 
 export const ReceiptPage = () => {
   const navigate = useNavigate();
@@ -23,6 +22,7 @@ export const ReceiptPage = () => {
       name: "abc",
       maxCount: 123,
       onShelf: true,
+      key: "aaa",
     },
     {
       nickname: "xxxxx2",
@@ -30,6 +30,7 @@ export const ReceiptPage = () => {
       name: "abcd",
       maxCount: 123,
       onShelf: false,
+      key: "bbb",
     },
   ];
 
@@ -53,7 +54,14 @@ export const ReceiptPage = () => {
           navigate("/");
         }}
         rightIcon={
-          <Button size="small" shape="rectangle" theme="primary">
+          <Button
+            size="small"
+            shape="rectangle"
+            theme="primary"
+            onClick={() => {
+              navigate("/deletePayment");
+            }}
+          >
             编辑
           </Button>
         }
@@ -172,6 +180,7 @@ export const ReceiptPage = () => {
       </div>
       {paymentMethods.map((i) => (
         <SwipeCell
+          key={i.key}
           right={
             <Button
               theme={i.onShelf ? "danger" : "primary"}
